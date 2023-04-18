@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Karolis' Web page</title>
+		
+		<style>
+			h1 {color: red;}
+		</style>
+	</head>
+	
+	<body>
+	<h1>welcome to my webpage</h1>
+	
+	<label>Enter a value:</label><br>
+	<input type="text" id="numberValue" value="1"><br>
+	<button onclick="printValue();">Submit</button>
+		
+	<div id="towrite"></div>
+	
+	<script>
+		let div = document.getElementById("towrite");
+
+		function printValue()
+		{
+			let valueEntered = Number(document.getElementById("numberValue").value);
+			console.log(valueEntered);
+			div.innerHTML = valueEntered;
+		}
+	</script>
+	</body>
+</html>
